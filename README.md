@@ -10,7 +10,7 @@ Please note that the user interface supposed to be Desktop First, and not mobile
 in expanding the App to support either Progressive Web App or Native App.
 
 My choice in choosing Laravel to integrate this project, was mainly to understand MVC pattern, and how to organize
-my project better. In addition, it helped me to understand better regards database migrations, seeds, and factories
+my project better. In addition, it helped me to understand better regards database migrations, database relations, seeds, and factories
 that I took advantage when I am creating different tests.
 
 #### Features
@@ -18,10 +18,13 @@ that I took advantage when I am creating different tests.
 * Viewing completed orders
 * Partial API integration.
 
+<img src="https://res.cloudinary.com/dvpqug4qv/image/upload/v1588121383/go_manage_1_hkdw6l.png">
+
 #### Issues to be fixed
 * Timer: Currently the timer does not stop. Initial approach, create an **OrderTimeController** which will keep in
 track of all the orders. With the models, currently having the attributes of: `primary_key:id`, `foreign_key:order_id`, 
 `created_at`, `accepted_at`, `delivering_at` and `completed_at`
+* Whenever `driver_id:null` is being mutated, it does not reflect the changes being made on Vue.
 
 #### To be implemented
 * VueChart. Being able to see average orders per hour.

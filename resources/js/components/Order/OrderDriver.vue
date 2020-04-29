@@ -13,7 +13,7 @@
                 </div>
 
                 <div v-else>
-                    {{ getDriver.name ? getDriver.name : 'n/a'}}
+                    {{ getDriver === null ? 'n/a' : getDriver.name}}
                 </div>
             </div>
 

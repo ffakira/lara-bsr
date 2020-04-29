@@ -37692,7 +37692,7 @@ var render = function() {
           : _c("div", [
               _vm._v(
                 "\n                " +
-                  _vm._s(_vm.getDriver.name ? _vm.getDriver.name : "n/a") +
+                  _vm._s(_vm.getDriver === null ? "n/a" : _vm.getDriver.name) +
                   "\n            "
               )
             ])
