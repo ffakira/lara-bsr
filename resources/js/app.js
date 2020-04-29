@@ -28,6 +28,7 @@ const store = new Vuex.Store(storeData);
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('order-component', require('./components/OrderComponent.vue').default);
 Vue.component('order-complete-component', require('./components/OrderCompleteComponent.vue').default);
+Vue.component('driver-component', require('./components/DriverComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
