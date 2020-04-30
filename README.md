@@ -18,16 +18,16 @@ that I took advantage when I am creating different tests.
 * Viewing completed orders
 * Partial API integration.
 
-<img src="https://res.cloudinary.com/dvpqug4qv/image/upload/v1588121383/go_manage_1_hkdw6l.png">
+<img src="https://res.cloudinary.com/dvpqug4qv/image/upload/v1588259274/go_manage_3_v7mgti.png">
 
 #### Issues to be fixed
 * Timer: Currently the timer does not stop. Initial approach, create an **OrderTimeController** which will keep in
 track of all the orders. With the models, currently having the attributes of: `primary_key:id`, `foreign_key:order_id`, 
 `created_at`, `accepted_at`, `delivering_at` and `completed_at`
 * Whenever `driver_id:null` is being mutated, it does not reflect the changes being made on Vue.
+* Partial VueChart have been implemented. Requires reactive data to be passed via props.
 
 #### To be implemented
-* VueChart. Being able to see average orders per hour.
 * Able to see out of stock items via the menu
 * Implement driver's tips (extend Order model).
 
