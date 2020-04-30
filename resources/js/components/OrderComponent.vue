@@ -1,5 +1,6 @@
 <template>
     <div>
+        <OrderBar></OrderBar>
         <h3>Active Orders</h3>
         <table class="table">
             <thead>
@@ -22,9 +23,11 @@
 
 <script>
     import OrderTable from './Order/OrderTable';
+    import OrderBar from "./Chart/OrderBar";
     export default {
         components: {
-            OrderTable
+            OrderTable,
+            OrderBar
         },
         name: "OrderComponent",
         mounted() {
@@ -36,33 +39,5 @@
                 return this.$store.getters.getOrderFormGetters;
             }
         },
-
-        methods: {
-            // editMode: function(index, mode) {
-            //     switch(mode) {
-            //         case 'status':
-            //             if (this.edit.status === null) this.edit.status = index;
-            //             else this.edit.status = null;
-            //             break;
-            //         case 'driver':
-            //             if (this.edit.driver === null) this.edit.driver = index;
-            //             else this.edit.driver = null;
-            //             break;
-            //     }
-            // },
-
-            // getOrders: function() {
-            //     axios.get('/api/v1/orders').then(res => {
-            //         this.orders = res.data;
-            //         // Covert HH:mm format to seconds
-            //         this.orders.forEach(order => order.ready_at = Math.abs(moment().diff(moment(order.order_at, 'YYYY-MM-DD HH:mm:ss'), 'seconds')));
-            //         setInterval(() => {
-            //             this.orders.forEach(order => {
-            //                 order.ready_at = Math.abs(moment().diff(moment(order.order_at, 'YYYY-MM-DD HH:mm:ss'), 'seconds'));
-            //             });
-            //         }, 1000);
-            //     });
-            // }
-        }
     }
 </script>

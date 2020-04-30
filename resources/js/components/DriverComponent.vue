@@ -25,14 +25,13 @@
         name: "DriverComponent",
         data() {
             return {
-                drivers: [],
-                order: []
+                drivers: []
             }
         },
         mounted() {
             axios.get('/api/v1/drivers')
                 .then(res => {
-                    res.data.forEach(driver => {
+                    res.data.map(driver => {
                         axios.get(`/api/v1/driver/${driver.id}/orders`)
                             .then(orderRes => {
                                 driver.orderLength = orderRes.data.length;
@@ -42,14 +41,6 @@
                     });
                 })
                 .catch(err => `[Client Error]: ${err}`);
-        },
-
-        methods: {
-            getDriverOrders(driverId) {
-                axios.get(`/api/v1/driver/${driverId}/orders`)
-                    .then(res => console.log(res.data.length))
-                    .catch(err => `[Client Error]: ${err}`);
-            }
         }
     }
 </script>
